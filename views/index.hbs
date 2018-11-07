@@ -1,0 +1,17 @@
+<h1>{{ title }}</h1>
+<p>Welcome to {{ title }}</p>
+<form action="/users/submit" method="post">
+    <input type="text" name="id">
+    <button type="submit">Submit</button>
+</form>
+<div class="characters">
+    {{#characters}}
+        <div class="character">
+            <img class="image" src={{image}} />
+            <div>{{id}}</div>
+            <div>{{name}}</div>
+            <div>{{gender}}</div>
+            <div>{{job}}</div>
+        </div>
+    {{/characters}}
+</div>
